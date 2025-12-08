@@ -34,7 +34,7 @@ export class Incident {
   @Column({ type: 'text' })
   status: string;
 
-  @Column({ type: 'date' })
+  @Column({ type: 'timestamptz' })
   dateTime: Date;
 
   @CreateDateColumn({ name: 'created_at', select: false })
