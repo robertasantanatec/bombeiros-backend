@@ -1,0 +1,13 @@
+{
+  "name": "bombeiros-backend",
+  "type": "node",
+  "scripts": {
+    "start": "node dist/main.js"
+  },
+  "run": {
+    "web": {
+      "command": "npm start",
+      "port": 3001
+    }
+  }
+}
