@@ -5,7 +5,6 @@ import { ExpressAdapter } from '@nestjs/platform-express';
 import { AppModule } from './infra/modules/app.module';
 
 dotenv.config();
-
 async function bootstrap() {
   const server = express();
   const app = await NestFactory.create(AppModule, new ExpressAdapter(server));

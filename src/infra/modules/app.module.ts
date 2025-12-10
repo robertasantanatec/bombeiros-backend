@@ -6,10 +6,15 @@ import { DatabaseModule } from './database.module';
 import { UserModule } from './user.module';
 import { IncidentModule } from './incident.module';
 import { TokenModule } from './token.module';
+import { ConfigModule } from '@nestjs/config';
 dotenv.config();
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: '.env',
+    }),
     DatabaseModule,
     UserModule,
     IncidentModule,
