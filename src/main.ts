@@ -8,7 +8,7 @@ dotenv.config();
 async function bootstrap() {
   const server = express();
   const app = await NestFactory.create(AppModule, new ExpressAdapter(server));
-  app.enableCors();
+  app.enableCors({ origin: '*' });
   await app.listen(3001);
 }
 bootstrap();
